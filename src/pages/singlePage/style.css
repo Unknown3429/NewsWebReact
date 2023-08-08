@@ -1,0 +1,80 @@
+/**********************************/
+/********* Single News CSS ********/
+/**********************************/
+.single-news {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 0 0;
+}
+
+.single-news .sn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.single-news .sn-img img {
+    width: 100%;
+}
+
+.single-news .sn-content {
+    position: relative;
+    width: 100%;
+    padding: 30px 0 30px 0;
+}
+
+.single-news .sn-content a.sn-title {
+    display: block;
+    width: 100%;
+    color: #353535;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.single-news .sn-content a.sn-title:hover {
+    color: #E47A2E;
+}
+
+h4 span {
+    color: #E47A2E;
+}
+
+.single-news .sn-content a.sn-date {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .3s;
+    letter-spacing: 1px;
+}
+
+.single-news .sn-content a.sn-date i {
+    margin-right: 5px;
+}
+
+.single-news .sn-content a.sn-date:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .single-news .sn-content a.sn-title {
+        display: block;
+        width: 100%;
+        color: #353535;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 10px;
+    }
+
+    .sn-content p{
+        font-size: 1.2rem;
+    }
+    .sn-content h4{
+        font-size: 1.5rem;
+    }
+
+}
