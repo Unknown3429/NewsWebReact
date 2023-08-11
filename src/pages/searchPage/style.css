@@ -135,7 +135,7 @@ body *:after {
     margin-bottom: 1em;
 }
 
-h3 {
+/* h3 {
     background: linear-gradient(182deg, #fff0 60%, var(--dark) 0 100%);
     display: inline;
     transform: rotate(-2deg);
@@ -148,7 +148,7 @@ h3 {
     border-radius: 0.25em;
     font-size: 1.35em;
     transform-origin: left bottom;
-}
+} */
 
 /* .member:nth-of-type(even) h3 {
     left: inherit;
@@ -193,7 +193,7 @@ h3 {
 
 
 .description p,
-h4 {
+.h4 {
     /* display: inline-block; */
     margin: 0.5em 0 0 0;
     color: var(--dark);

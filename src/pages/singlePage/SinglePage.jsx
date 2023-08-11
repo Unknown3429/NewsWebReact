@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { useNewsContext } from '../../context/NewsContext';
 import dayjs from 'dayjs';
 
+
 import "./style.css"
+import TextToSpeech from '../../components/textToSpeech/TextToSpeech';
 
 const SinglePage = () => {
-    // console.log(data);
-
-    // console.log(data);
+    // const [text, setText] = useState("")
+    // const { speak } = useSpeechSynthesis();
     const { singlePage } = useNewsContext();
-    // console.log(singlePage?.readmore);
+
     return (
         <div>
             {/* <!-- Breadcrumb Start --> */}
@@ -37,6 +38,7 @@ const SinglePage = () => {
                                     "MMM D, YYYY"
                                 )}</NavLink>
                                 <h4>Author: <span><i>{singlePage?.authorName}</i></span></h4>
+                                <TextToSpeech text={singlePage?.content} />
                                 <p style={{ minHeight: "25vh", fontSize: "1.5rem" }}>
                                     {singlePage.content}
                                 </p>

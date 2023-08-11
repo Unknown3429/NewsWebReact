@@ -1,0 +1,37 @@
+.textSpeech {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 20%;
+    /* font-size: 2rem; */
+    /* left: 0; */
+    margin-left: -0.7rem;
+
+}
+
+.BsFillPlayFill,
+.BsFillStopFill {
+    font-size: 50px !important;
+}
+
+.icons {
+    color: rgb(141, 135, 135);
+    transition: all;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.icons:hover {
+    color: rgb(201, 195, 195);
+}
+
+@media only screen and (max-width: 750px) {
+    .textSpeech {
+        max-width: 30%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .textSpeech {
+        max-width: 40%;
+    }
+}

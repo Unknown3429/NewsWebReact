@@ -11,6 +11,7 @@ import Business from './pages/business/Business'
 import Science from './pages/science/Science'
 import SinglePage from './pages/singlePage/SinglePage'
 import SearchPage from './pages/searchPage/SearchPage'
+import Contact from './pages/contact/Contact'
 
 
 
@@ -27,7 +28,7 @@ function App() {
         <Route path="/science" element={<Science />} />
         <Route path="/singlepage/:data" element={<SinglePage />} />
         <Route path="/searchPage/:query" element={<SearchPage />} />
-        <Route path="/contact" element={""} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

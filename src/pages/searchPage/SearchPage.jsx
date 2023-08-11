@@ -38,7 +38,7 @@ const SearchPage = () => {
                             <div className="thumb"><img src={data?.imageUrl} /></div>
                             <div className="description">
                                 {/* <h3>Author:{data?.authorName}</h3> */}
-                                <h4>{data?.title}<br /></h4>
+                                <h4 className='h4'>{data?.title}<br /></h4>
                                 <p>{data?.content}</p>
                                 <p>On:{dayjs(data?.createdAt
                                 ).format(

@@ -24,7 +24,7 @@ const TopNews = ({ news, title, news2 }) => {
         news = await firstNews;
         // console.log(news);
         getSingleNews(news);
-        console.log(singlePage);
+        // console.log(singlePage);
     }
 
     return (

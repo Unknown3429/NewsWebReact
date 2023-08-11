@@ -4,6 +4,7 @@ import "./style.css"
 import newsimg from "../../assets/news.jpg"
 import { useNewsContext } from '../../context/NewsContext';
 import { NavLink } from 'react-router-dom';
+import TextToSpeech from '../textToSpeech/TextToSpeech';
 
 const BodyNews = ({ news, news2, title }) => {
 
@@ -22,11 +23,11 @@ const BodyNews = ({ news, news2, title }) => {
         <div>
             <div className="main-news">
                 <div className="container-fluid allNews">
-                    <h2 style={{textAlign:"none"}}><i className="fas fa-align-justify"></i>{title} News</h2>
+                    <h2 style={{ textAlign: "none" }}><i className="fas fa-align-justify"></i>{title} News</h2>
                     <div className="row">
                         {sliceNews2?.map((data, i) => {
                             return (
-                                <div onClick={() => handleSinglePage(data)} key={i} className="col-md-6">
+                                <div onClick={() => handleSinglePage(data)} key={i} className="m-item col-md-6">
                                     <div className="mn-img">
                                         {!data?.imageUrl ? <img className='newsimg' src={newsimg} /> : <img className='newsimg' src={data?.imageUrl} />}
                                         <div className="mn-content">
@@ -38,6 +39,7 @@ const BodyNews = ({ news, news2, title }) => {
                                             </div>
                                         </div>
                                     </div>
+                                    {/* <TextToSpeech text={data?.content}/> */}
                                 </div>
                             )
                         })}
