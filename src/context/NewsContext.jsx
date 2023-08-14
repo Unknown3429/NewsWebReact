@@ -14,6 +14,7 @@ const initialState = {
     news2: [],
     searchPage: [],
     singlePage: [],
+    scrollNews: [],
     loading: false,
     error: false,
     newsCategory: []
@@ -61,7 +62,7 @@ const NewsProvider = ({ children }) => {
         }
     }
 
-    // for Geting news categorywise from api 
+    // for Geting singleNews from api 
     const getSingleNews = async (data) => {
         dispatch({ type: "SET_LOADING" })
         try {
@@ -86,14 +87,27 @@ const NewsProvider = ({ children }) => {
         }
     }
 
+    // for infinite scroll 
+    const getScroll = async (url) => {
+        dispatch({ type: "SET_LOADING" })
+        try {
+            const res = await axios.get(url);
+            const news = await res.data;
+            dispatch({ type: "SET_SCROLL_NEWS", payload: news })
+        }
+        catch (error) {
+            dispatch({ type: "API_ERROR" })
+        }
+    }
+
 
     useEffect(() => {
         getNews(`${NewsApi}/${category}`)
-        getNews2(`https://inshorts.me/news/all?offset=0&limit=25`)
+        getNews2(`https://inshorts.me/news/all?offset=0&limit=99`)
     }, [])
 
     return (
-        <NewsContext.Provider value={{ ...state, getNews, getNewsCategory, getSingleNews, getSearch }}>
+        <NewsContext.Provider value={{ ...state, getNews, getNewsCategory, getSingleNews, getSearch, getScroll }}>
             {children}
         </NewsContext.Provider>
     )

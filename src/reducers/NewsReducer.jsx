@@ -46,6 +46,13 @@ const ProductReducer = (state, action) => {
                 loading: false,
                 searchPage: action.payload
             }
+
+        case "SET_SCROLL_NEWS":
+            return {
+                ...state,
+                loading: false,
+                scrollNews: action.payload
+            }
     }
 }
 
