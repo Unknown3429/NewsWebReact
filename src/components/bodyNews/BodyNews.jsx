@@ -18,8 +18,7 @@ const BodyNews = ({ news, news2, title, }) => {
         getSingleNews(news);
     }
 
-    let sliceNews2 = news2?.slice(0, num);
-
+    const sliceNews2 = news2?.slice(0, num);
     // const fetchMoreData = () => {
     //     if (num === 100) {
     //         setHasmore(false)
@@ -32,8 +31,6 @@ const BodyNews = ({ news, news2, title, }) => {
 
     //     }  // sliceNews2 = news2?.slice(0, num);
     // }
-
-
     const handelInfiniteScroll = async () => {
         // console.log("scrollHeight" + document.documentElement.scrollHeight);
         // console.log("innerHeight" + window.innerHeight);
@@ -63,8 +60,6 @@ const BodyNews = ({ news, news2, title, }) => {
 
         return () => window.removeEventListener("scroll", handelInfiniteScroll);
     }, [num]);
-
-
 
 
     return (
@@ -108,10 +103,7 @@ const BodyNews = ({ news, news2, title, }) => {
             </div>
 
         </div>
-
     )
-
 }
-
 
 export default BodyNews
